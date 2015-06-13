@@ -1,0 +1,30 @@
+# Travis CI, Continuous Integration testing http://travis-ci.org/
+#
+# The Travis CI instance provided for GitHub runs
+# Ubuntu 12 LTS
+
+# set c as language, c# not officially supported
+language: c
+
+install:
+  - sudo apt-get update -yqq
+# need to install the GNU Image Manipulation program
+# and install the mono C# runtime 
+# need libgimp for gimptool, which manages plug-ins 
+# configure will pass but gtk-sharp is needed or make will fail 
+  - sudo apt-get install gimp mono-complete libgimp2.0-dev gtk-sharp-2.0
+script:
+  - libgimp2.0-dev
+  - ./configure 
+  - make
+  - sudo make install
+
+# This test only shows that gimp-sharp can be configured and installed 
+# on Ubuntu 12
+# Hopefully it will work too. 
+
+# TODO more configuration options, for starters:  
+# ./configure --with-unittest --with-pdn --with-incomplete
+# see ./configure --help for many other options
+#
+# TODO test to see if mono-devel is enough instead of mono-complete
