@@ -20,8 +20,8 @@ script:
   - sudo make install
 
 # This test only shows that gimp-sharp can be configured and installed 
-# on Ubuntu 12
-# Hopefully it will work too. 
+# on Ubuntu 12.04 (Precise Pangolin). 
+# Hopefully it will work too, but this only tests the install.  
 
 # TODO more configuration options, for starters:  
 # ./configure --with-unittest --with-pdn --with-incomplete
