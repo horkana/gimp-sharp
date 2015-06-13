@@ -14,7 +14,7 @@ install:
 # configure will pass but gtk-sharp is needed or make will fail 
   - sudo apt-get install gimp mono-complete libgimp2.0-dev gtk-sharp2
 script:
-  - libgimp2.0-dev
+  - autoreconf -i
   - ./configure 
   - make
   - sudo make install
