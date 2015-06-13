@@ -8,8 +8,8 @@ language: c
 
 install:
   - sudo apt-get update -yqq
-# need to install the GNU Image Manipulation program
-# and install the mono C# runtime 
+# need to install the GNU Image Manipulation Program (GIMP)
+# and install the Mono C# framework 
 # need libgimp for gimptool, which manages plug-ins 
 # configure will pass but gtk-sharp is needed or make will fail 
   - sudo apt-get install gimp mono-complete libgimp2.0-dev gtk-sharp-2.0
